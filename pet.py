@@ -36,5 +36,14 @@ class pet:
         else:
             self.skill_blank_cnt = 0
 
+    def fuction_choice(self):
+        self.state = input("function choice:")
+        print("your fuction choice is %s" %self.state)
+        switchState = {
+            "init": self.skill_init(vampire.skill_num)
+        }
+
+
 vampire = pet("vampire", 65)
 vampire.skill_init(vampire.skill_num)
+vampire.fuction_choice()
